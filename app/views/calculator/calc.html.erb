@@ -1,0 +1,9 @@
+<%= form_tag("/calc", method: "get") do %>
+  <%= text_field_tag(:expr) %>
+  <br />
+  <% if flash[:notice] %>
+    <%= number_with_precision(flash[:notice],precision: 2, strip_insignificant_zeros: true) %>
+  <% end %>
+  <br />
+  <%= submit_tag("Calculate") %>
+<% end %>

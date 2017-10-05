@@ -1,5 +1,5 @@
 require 'strscan'
-require 'token'
+require_relative './token'
 
 class ExpressionTokenizer
   def initialize(expr)

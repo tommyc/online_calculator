@@ -1,7 +1,7 @@
 require 'strscan'
-require 'expression_tokenizer'
-require 'expression_parser'
-require 'expression_evaluator'
+require_relative './expression_tokenizer'
+require_relative './expression_parser'
+require_relative './expression_evaluator'
 
 class Calculator
   attr_reader :expression

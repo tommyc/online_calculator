@@ -17,7 +17,7 @@ class ExpressionParser
   end
 
   def evaluate_operator(token)
-    while op_priority(token) #{ @output << @operators.pop }
+    while op_priority(token)
       @output << @operators.pop
     end
     @operators << token
@@ -28,6 +28,6 @@ class ExpressionParser
   end
 
   def to_s
-    @output.map(&:value).join(" ")
+    @output.map(&:value).join(' ')
   end
 end

@@ -13,7 +13,6 @@ class Calculator
     return @expression.to_i if @expression.scan(/\d+/).size == 1
     tokens = ExpressionTokenizer.new(@expression).parse
     postfix = ExpressionParser.new(tokens).parse
-    # puts "postfix.output ========== #{postfix.output}"
     ExpressionEvaluator.new(postfix.output).execute
   end
 end

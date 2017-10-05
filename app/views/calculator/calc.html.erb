@@ -1,0 +1,9 @@
+<%= form_tag("/calc", method: "get") do %>
+  <%= text_field_tag(:expr) %>
+  <br />
+  <% if flash[:notice] %>
+    <%= flash[:notice] %>
+  <% end %>
+  <br />
+  <%= submit_tag("Calculate") %>
+<% end %>
